@@ -1,0 +1,36 @@
+<div class="login-wrapper">
+  <form class="login" [formGroup]="form" (ngSubmit)="submit()">
+    <section class="title">
+      <h3 class="welcome">Welcom to</h3>
+      Pennueng Holdding
+      <h5 class="hint">Use your Company ID to sign in</h5>
+    </section>
+    <div class="login-group">
+      <clr-input-container>
+        <label class="clr-sr-only">Username</label>
+        <input
+          type="text"
+          formControlName="username"
+          clrInput
+          placeholder="Username"
+        />
+        <clr-control-error *clrIfError="'required'"
+          >Username Invalid</clr-control-error
+        >
+      </clr-input-container>
+      <clr-password-container>
+        <label class="clr-sr-only">Password</label>
+        <input
+          type="password"
+          formControlName="password"
+          clrPassword
+          placeholder="Password"
+        />
+        <clr-control-error *clrIfError="'required'"
+          >Password Required</clr-control-error
+        >
+      </clr-password-container>
+      <button type="submit" class="btn btn-primary">NEXT</button>
+    </div>
+  </form>
+</div>

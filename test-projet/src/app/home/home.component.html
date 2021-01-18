@@ -1,0 +1,70 @@
+<div class="main-container">
+  <div class="alert alert-app-level"></div>
+  <header class="header-6">
+    <div class="branding">
+      <a href="..." class="nav-link">
+        <clr-icon shape="library"> </clr-icon>
+        <span class="title">Pennueng Holdding</span>
+      </a>
+    </div>
+    <div class="header-actions">
+      <clr-dropdown>
+        <button
+          class="nav-icon"
+          clrDropdownTrigger
+          aria-label="toggle setting menu"
+        >
+          <clr-icon shape="cog"></clr-icon>
+          <clr-icon shape="caret down"></clr-icon>
+        </button>
+        <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+          <a href="..." clrDropdownItem
+            ><clr-icon shape="savings"></clr-icon> About</a
+          >
+          <a href="..." clrDropdownItem
+            ><clr-icon shape="grid-view"> </clr-icon> Prederences</a
+          >
+          <a routerLink="/login" clrDropdownItem
+            ><clr-icon shape="logout"></clr-icon> Log out</a
+          >
+        </clr-dropdown-menu>
+      </clr-dropdown>
+    </div>
+  </header>
+  <div class="content-container">
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true">
+      <clr-vertical-nav-group routerLinkActive="active">
+        <clr-icon shape="user" clrVerticalNavIcon></clr-icon>
+        Normal
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink routerLink="..." routerLinkActive="active">
+            Pidgey
+          </a>
+          <a clrVerticalNavLink routerLink="..." routerLinkActive="active">
+            Snorlax
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+      <clr-vertical-nav-group routerLinkActive="active">
+        <clr-icon shape="flame" clrVerticalNavIcon></clr-icon>
+        Fire
+        <clr-vertical-nav-group-children>
+          <a
+            clrVerticalNavLink
+            routerLink="/home/member"
+            routerLinkActive="active"
+          >
+            Charmander
+          </a>
+          <a clrVerticalNavLink routerLink="..." routerLinkActive="active">
+            Charizard
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+    </clr-vertical-nav>
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="clr-footer">version 2.2.5</div>
+</div>
